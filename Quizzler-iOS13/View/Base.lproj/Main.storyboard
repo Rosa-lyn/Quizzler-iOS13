@@ -112,7 +112,7 @@
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="XcF-W2-yvJ"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="YTI-lX-81M"/>
                         <outlet property="scoreLabel" destination="vMT-4d-q9U" id="iOW-zG-YfF"/>
-                        <segue destination="8MS-sW-X1T" kind="show" id="PbQ-1x-JGI"/>
+                        <segue destination="8MS-sW-X1T" kind="show" identifier="goToFinalScoreStoryboard" id="PbQ-1x-JGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,7 +127,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7z-lZ-a7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="74"/>
+            <point key="canvasLocation" x="1788" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O2h-2C-GYt">

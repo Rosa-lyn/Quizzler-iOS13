@@ -36,7 +36,11 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
 
-        quizBrain.nextQuestion()
+        if quizBrain.questionNumber + 1 == quizBrain.quiz.count {
+            performSegue(withIdentifier: "goToFinalScoreStoryboard", sender: self)
+        } else {
+            quizBrain.nextQuestion()
+        }
 
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
 
