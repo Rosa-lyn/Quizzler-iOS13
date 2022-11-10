@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
 
-        if quizBrain.questionNumber + 1 == quizBrain.quiz.count {
+        if quizBrain.isLastQuestion {
             performSegue(withIdentifier: "goToFinalScoreStoryboard", sender: self)
         } else {
             quizBrain.nextQuestion()
