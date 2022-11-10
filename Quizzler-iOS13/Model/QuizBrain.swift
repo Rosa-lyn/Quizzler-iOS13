@@ -39,16 +39,8 @@ struct QuizBrain {
         return quiz[questionNumber].text
     }
 
-    func getChoice1ButtonLabel() -> String {
-        return quiz[questionNumber].answers[0]
-    }
-
-    func getChoice2ButtonLabel() -> String {
-        return quiz[questionNumber].answers[1]
-    }
-
-    func getChoice3ButtonLabel() -> String {
-        return quiz[questionNumber].answers[2]
+    func getAnswers() -> [String] {
+        return quiz[questionNumber].answers
     }
 
     func getProgress() -> Float {

@@ -43,9 +43,10 @@ class ViewController: UIViewController {
 
     @objc func updateUI() {
         questionLabel.text = quizBrain.getQuestionText()
-        choice1Button.setTitle(quizBrain.getChoice1ButtonLabel(), for: .normal)
-        choice2Button.setTitle(quizBrain.getChoice2ButtonLabel(), for: .normal)
-        choice3Button.setTitle(quizBrain.getChoice3ButtonLabel(), for: .normal)
+        let quizAnswers = quizBrain.getAnswers()
+        choice1Button.setTitle(quizAnswers[0], for: .normal)
+        choice2Button.setTitle(quizAnswers[1], for: .normal)
+        choice3Button.setTitle(quizAnswers[2], for: .normal)
         
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.getScore())"
