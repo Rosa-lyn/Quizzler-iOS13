@@ -112,7 +112,6 @@
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="XcF-W2-yvJ"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="YTI-lX-81M"/>
                         <outlet property="scoreLabel" destination="vMT-4d-q9U" id="iOW-zG-YfF"/>
-                        <segue destination="8MS-sW-X1T" kind="show" identifier="goToFinalScoreStoryboard" id="PbQ-1x-JGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

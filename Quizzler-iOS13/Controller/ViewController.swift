@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         }
 
         if quizBrain.isLastQuestion {
-            performSegue(withIdentifier: "goToFinalScoreStoryboard", sender: self)
+            showFinalScoreScreen()
         } else {
             quizBrain.nextQuestion()
         }
@@ -59,6 +59,14 @@ class ViewController: UIViewController {
         choice1Button.backgroundColor = UIColor.clear
         choice2Button.backgroundColor = UIColor.clear
         choice3Button.backgroundColor = UIColor.clear
+    }
+
+    func showFinalScoreScreen() {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "FinalScoreViewController") as? FinalScoreViewController else {
+            fatalError("Failed to load FinalScoreViewController from storyboard.")
+        }
+
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
