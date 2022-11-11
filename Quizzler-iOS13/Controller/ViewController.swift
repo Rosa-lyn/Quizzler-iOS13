@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice2Button: UIButton!
     @IBOutlet weak var choice3Button: UIButton!
 
-
     var quizBrain  = QuizBrain()
 
     override func viewDidLoad() {
@@ -62,7 +61,9 @@ class ViewController: UIViewController {
     }
 
     func showFinalScoreScreen() {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "FinalScoreViewController") as? FinalScoreViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "FinalScoreViewController", creator: { coder in
+            return FinalScoreViewController(coder: coder, quizBrain: self.quizBrain)
+        }) else {
             fatalError("Failed to load FinalScoreViewController from storyboard.")
         }
 

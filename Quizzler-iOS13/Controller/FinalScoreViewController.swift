@@ -10,5 +10,14 @@ import Foundation
 import UIKit
 
 class FinalScoreViewController: UIViewController {
-
+    var quizBrain: QuizBrain
+    
+    init?(coder: NSCoder, quizBrain: QuizBrain) {
+        self.quizBrain = quizBrain
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("You must create this view controller with a quizBrain.")
+    }
 }
