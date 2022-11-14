@@ -62,7 +62,9 @@ class ViewController: UIViewController {
     }
 
     func showFinalScoreScreen() {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "FinalScoreViewController") as? FinalScoreViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "FinalScoreViewController", creator: { coder in
+            return FinalScoreViewController(coder: coder)
+        }) else {
             fatalError("Failed to load FinalScoreViewController from storyboard.")
         }
 
